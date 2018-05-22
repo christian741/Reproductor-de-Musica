@@ -107,19 +107,19 @@ public class InterfaceGrafica extends javax.swing.JFrame {
 //Importa iconos esteticos en dos posiciones a los botones
         new BotonesEscucha(jButtonReproducir,"Reproducir.png","ReproducirP.png");
         //Detener la cancion
-        new BotonesEscucha(jButtonParar,"Parar.png","PararP.png");
+        new BotonesEscucha(jButtonParar,"nombre.png","nombre.png");
         //Pausar La cancion
-        new BotonesEscucha(jButtonPausar, "Pausar.png", "PausarP.png");
+        new BotonesEscucha(jButtonPausar, "nombre.png", "nombre.png");
         //Siguiente cancion
-        new BotonesEscucha(jButtonAvance, "Avance.png", "AvanceP.png");
+        new BotonesEscucha(jButtonAvance, "nombre.png", "nombre.png");
         //Anterior cancion
-        new BotonesEscucha(jButtonRetroceso, "Retroceso.png", "RetrocesoP.png");
+        new BotonesEscucha(jButtonRetroceso, "nombre.png", "nombre.png");
         //Carpetas
-        new BotonesEscucha(jButtonDirectorio, "Directorio.png", "DirectorioP.png");
+        new BotonesEscucha(jButtonDirectorio, "nombre.png", "nombre.png");
        
-        new BotonesEscucha(jButtonRepetir, "Repetir.png", "RepetirP.png");
+        new BotonesEscucha(jButtonRepetir, "nombre.png", "RepetirP.png");
         //Silenciar Musica
-        new BotonesEscucha(jButtonMute, "Mute.png", "MuteP.png");
+        new BotonesEscucha(jButtonMute, "nombre.png", "nombre.png");
         
         
        
@@ -592,7 +592,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
 
         
         
-        abrirFile.setDialogTitle("Ruta Absoluta Busqueda..");
+        abrirFile.setDialogTitle("Ruta Absoluta Busqueda:");
         abrirFile.setFileFilter(filtrado);
         abrirFile.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         
@@ -647,14 +647,14 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         if (!siguiente){
             
             if(repitaCancion){
-                new BotonesEscucha(jButtonRepetir, "Repetir.png", "RepetirP.png");
-                jButtonRepetir.setIcon(new ImageIcon(getClass().getResource("botones/Repetir.png")));
+                new BotonesEscucha(jButtonRepetir, "nombre.png", "nombre.png");
+               
                 repitaCancion=false;
                 System.out.println(repitaCancion);
             
              }else {
-                new BotonesEscucha(jButtonRepetir,"RepetirPulsando.png","RepetirPulsandoP.png");
-                jButtonRepetir.setIcon(new ImageIcon(getClass().getResource("botones/RepetirPulsando.png")));
+                new BotonesEscucha(jButtonRepetir,"nombre.png","nombre.png");
+               
                 repitaCancion=true;
                 System.out.println(repitaCancion);
             }
@@ -673,8 +673,8 @@ public class InterfaceGrafica extends javax.swing.JFrame {
            if(mute){
                volumen = volumenM;
                jSliderControlVolumen.setValue((int)(volumen*100)); 
-               new BotonesEscucha(jButtonMute, "Mute.png", "MuteP.png");
-               jButtonMute.setIcon(new ImageIcon(getClass().getResource("botones/Mute.png")));            
+               new BotonesEscucha(jButtonMute, "nombre.png", "nombre.png");
+                     
                mute=false;
                System.out.println(mute);
             
@@ -682,8 +682,8 @@ public class InterfaceGrafica extends javax.swing.JFrame {
                volumenM=volumen;
                volumen=0f;
                jSliderControlVolumen.setValue(0); 
-               new BotonesEscucha(jButtonMute,"MutePulsando.png","MutePulsandoP.png");
-               jButtonMute.setIcon(new ImageIcon(getClass().getResource("botones/MutePulsando.png")));
+               new BotonesEscucha(jButtonMute,"nombre.png","nombre.png");
+              
                mute=true;
                System.out.println(mute);
             }
