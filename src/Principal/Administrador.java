@@ -34,6 +34,7 @@ public class Administrador extends javax.swing.JFrame {
         usuarios2 = new ModelosPersona.Usuarios();
         registroCancion1 = new ModeloCancion.RegistroCancion();
         registroDisco1 = new ModeloAlbum.RegistroDisco();
+        busqueda1 = new ModelosPersona.Busqueda();
 
         FotoTitulo.setText("FOTO");
 
@@ -41,6 +42,7 @@ public class Administrador extends javax.swing.JFrame {
         jtabbedUsuarios.addTab("usuarios", usuarios2);
         jtabbedUsuarios.addTab("RegistroCanciones", registroCancion1);
         jtabbedUsuarios.addTab("Registro Albums", registroDisco1);
+        jtabbedUsuarios.addTab("Buscar", busqueda1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,6 +103,7 @@ public class Administrador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FotoTitulo;
+    private ModelosPersona.Busqueda busqueda1;
     private ModelosPersona.JPanelRegistro jPanelRegistro1;
     private javax.swing.JTabbedPane jtabbedUsuarios;
     private ModeloCancion.RegistroCancion registroCancion1;

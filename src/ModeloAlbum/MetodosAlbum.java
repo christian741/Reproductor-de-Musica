@@ -42,7 +42,8 @@ public class MetodosAlbum {
         }
 
     }
-      public static Albums buscar(String nombre) {
+    
+     public static Albums buscar(String nombre) {
         try {
             String query = "SELECT * FROM album WHERE nombreAlbum = ?;";
             PreparedStatement sentenciaP = database.open().prepareStatement(query);

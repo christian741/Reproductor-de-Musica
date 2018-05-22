@@ -7,7 +7,9 @@ package ModeloCompra;
 
 import BaseDatos.BaseDatos;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -35,6 +37,29 @@ public class MetodosCompra {
             e.printStackTrace();
         }
 
+    }
+      public static ArrayList<Compra> obtenerTodos() {
+         
+        ArrayList<Compra> canciones= new ArrayList<Compra>();
+
+        try {
+            String query = "SELECT * FROM compras;";
+            PreparedStatement sentenciaP = database.open().prepareStatement(query);
+            ResultSet resultado = sentenciaP.executeQuery();
+
+            while (resultado.next()) {
+               canciones.add(Compra.crear(resultado.getInt("id"), resultado.getInt("documento"),resultado.getString("nombre"),resultado.getString("cancion"),resultado.getString("album")));
+            }
+
+            sentenciaP.close();
+            database.close();
+
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return canciones;
     }
 
     

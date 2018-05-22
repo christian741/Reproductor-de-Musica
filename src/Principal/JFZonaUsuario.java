@@ -41,6 +41,7 @@ public class JFZonaUsuario extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         tiendaJP1 = new ModelosPersona.TiendaJP();
+        cancionesCompradas1 = new ModelosPersona.CancionesCompradas();
         LOGO = new javax.swing.JLabel();
         jLabelNombre = new javax.swing.JLabel();
         jLabelNombreUsuario = new javax.swing.JLabel();
@@ -50,6 +51,7 @@ public class JFZonaUsuario extends javax.swing.JFrame {
         jLabelCorreoUsuario = new javax.swing.JLabel();
 
         jTabbedPane1.addTab("Tienda", tiendaJP1);
+        jTabbedPane1.addTab("Canciones", cancionesCompradas1);
 
         LOGO.setText("LOGO");
 
@@ -180,6 +182,7 @@ public class JFZonaUsuario extends javax.swing.JFrame {
     private javax.swing.JButton CerrarSesion;
     private javax.swing.JLabel ImgenUsuario;
     private javax.swing.JLabel LOGO;
+    private ModelosPersona.CancionesCompradas cancionesCompradas1;
     private javax.swing.JLabel jLabelCorreo;
     private javax.swing.JLabel jLabelCorreoUsuario;
     private javax.swing.JLabel jLabelNombre;
