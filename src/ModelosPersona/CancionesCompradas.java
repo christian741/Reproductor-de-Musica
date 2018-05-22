@@ -27,6 +27,7 @@ public class CancionesCompradas extends javax.swing.JPanel {
      */
     public CancionesCompradas() {
         initComponents();
+        configComponents();
     }
 
     /**
